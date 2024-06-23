@@ -13,4 +13,17 @@ const removeDuplicates = (items) => {
   for (let item of uniqueItemsarray) {
     console.log(item); //2,3,4,5,7
   }
-  
+
+
+
+  //way2
+  const removeDuplicate = (items) => {
+    return Array.from(new Set(items));
+   }
+   
+   
+   let uniqueItemsaarray = removeDuplicate([1, 2, 3, 2, 1, 2, 3, 4, 5, 7, 3, 2, 2]);
+   for (let item of uniqueItemsaarray) {
+     console.log(item); //2,3,4,5,7
+   }
+   
