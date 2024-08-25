@@ -5,10 +5,10 @@
 
 ## Best Platforms
 
-GreatFrontendDev /
-Propeers /
-takeUForward /
-LeetCode /
+GreatFrontendDev \
+Propeers \
+takeUForward \
+LeetCode \
 
 
 
