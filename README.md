@@ -10,7 +10,7 @@ Propeers \
 takeUForward \
 LeetCode \
 [Learners Bucket](https://www.linkedin.com/company/learnersbucket/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) \
-[DevTools Tech}(https://www.linkedin.com/company/devtools-tech/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) 
+[DevTools Tech](https://www.linkedin.com/company/devtools-tech/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) 
 
 
 
