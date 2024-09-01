@@ -31,9 +31,9 @@ Stay connected and follow my updates on LinkedIn, Medium, and Dev.to! Click the 
 
 | Platform | Follow Me |
 |----------|-----------|
-| LinkedIn | [![LinkedIn](https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png)](https://www.linkedin.com/in/your-profile) |
-| Medium   | [![Medium](https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png)](https://medium.com/@your-profile) |
-| Dev.to   | [![Dev.to](https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg)](https://dev.to/your-profile) |
+| LinkedIn | <a href="https://www.linkedin.com/in/your-profile"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="30"/></a> |
+| Medium   | <a href="https://medium.com/@your-profile"><img src="https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png" alt="Medium" width="30"/></a> |
+| Dev.to   | <a href="https://dev.to/your-profile"><img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Dev.to" width="30"/></a> |
 
 ## Profiles
 
