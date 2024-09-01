@@ -16,11 +16,11 @@ LeetCode \
 
 
 ## Design Patterns
-[Patterns.Div](https://www.patterns.dev/react/hooks-pattern)
-[Blog1](https://www.linkedin.com/pulse/design-patterns-frontend-development-divyansh-singh)
-[Blog2](https://www.ramotion.com/blog/frontend-design-patterns/)
-[Youtube - Mohit kumar toshniwal](https://www.youtube.com/watch?v=XJ2msSGeWP8&list=PLpM_sf_d5YTPhv75bhIazPrUiT43Jmg1o&index=6)
-[YouTube- evsage](https://www.youtube.com/watch?v=JKNjfDCNPa4)
+[Patterns.Div](https://www.patterns.dev/react/hooks-pattern) \
+[Blog1](https://www.linkedin.com/pulse/design-patterns-frontend-development-divyansh-singh) \
+[Blog2](https://www.ramotion.com/blog/frontend-design-patterns/) \
+[Youtube - Mohit kumar toshniwal](https://www.youtube.com/watch?v=XJ2msSGeWP8&list=PLpM_sf_d5YTPhv75bhIazPrUiT43Jmg1o&index=6) \
+[YouTube- evsage](https://www.youtube.com/watch?v=JKNjfDCNPa4) \
 
 ## Best Youtube Channels
 
