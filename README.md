@@ -25,6 +25,23 @@ LeetCode \
 ## Best Youtube Channels
 
 
+# Follow Me
+
+Stay connected and follow my updates on LinkedIn, Medium, and Dev.to! Click the logos below to visit my profiles.
+
+| Platform | Follow Me |
+|----------|-----------|
+| LinkedIn | [![LinkedIn](https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png)](https://www.linkedin.com/in/your-profile) |
+| Medium   | [![Medium](https://cdn.iconscout.com/icon/free/png-256/medium-47-433328.png)](https://medium.com/@your-profile) |
+| Dev.to   | [![Dev.to](https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg)](https://dev.to/your-profile) |
+
+## Profiles
+
+- **[LinkedIn](https://www.linkedin.com/in/your-profile)**: Connect with me on LinkedIn to see my professional updates, posts, and articles.
+- **[Medium](https://medium.com/@your-profile)**: Follow my Medium blog to read my articles on various topics.
+- **[Dev.to](https://dev.to/your-profile)**: Check out my Dev.to profile for tutorials, tips, and tech insights.
+
+Feel free to reach out and connect!
 
 ## ⭐️ Show Your Support
 Please give a ⭐️ if this project helped you!
