@@ -10,7 +10,10 @@ Propeers \
 takeUForward \
 LeetCode \
 [Learners Bucket](https://www.linkedin.com/company/learnersbucket/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) \
-[DevTools Tech](https://www.linkedin.com/company/devtools-tech/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) 
+[DevTools Tech](https://www.linkedin.com/company/devtools-tech/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B1i99rY2WRwC7XwtoZTPghQ%3D%3D) \
+[FrontEnd geek](https://frontendgeek.com/frontend-interview/machine-coding) \
+[Big FroontEnd Dev](https://bigfrontend.dev/problem) \
+[Frontend Junction](https://www.frontend-junction.com/interview-experience)
 
 ## Machine Coding
 [By Snachit](https://github.com/sanchit0496/reactjs-machine-coding-challenges) \
@@ -18,7 +21,8 @@ LeetCode \
 [xploditivity- you tube](https://www.youtube.com/watch?v=HPnGF2qIwWQ&list=PLOfzxGau1V5XoFTrzwmdb3uhUtn8nJDNE&index=3) \
 [Vijay Bhati](https://www.youtube.com/watch?v=1z_PTw_mOCw&list=PLBygUld3s6x8sI_H8UYROVMIVcuxUre1e)
 [Js Cafe]() \
-[RoadSide Coder]()
+[RoadSide Coder]() \
+[Mohit kumar Toshniwal](https://www.youtube.com/channel/UCZwpQ59mtSdFzKYEnk3cbeA)
 
 
 
