@@ -1,7 +1,7 @@
 https://learnersbucket.com/examples/interview/execute-async-functions-in-parallel-javascript/
 
 
-const asyncSeriesExecuter = async function(promises) {
+const asyncParallelExecuter = async function(promises) {
     // Create an array of promises that execute immediately and handle them as they resolve
     const executionPromises = promises.map(promise => 
       promise().then(result => console.log(result)).catch(e => console.log(e))
@@ -25,7 +25,7 @@ const asyncSeriesExecuter = async function(promises) {
     () => asyncTask(5),
   ];
   
-  asyncSeriesExecuter(promises);
+  asyncParallelExecuter(promises);
   
   /* Expected Output (order may vary):
     "Completing 1" (after 1 second)
