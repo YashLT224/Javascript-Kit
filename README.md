@@ -22,6 +22,7 @@ LeetCode \
 [Vijay Bhati - You tube](https://www.youtube.com/watch?v=1z_PTw_mOCw&list=PLBygUld3s6x8sI_H8UYROVMIVcuxUre1e)
 [Js Cafe - you tube]() \
 [RoadSide Coder - you tube]() \
+[Imran Shaikh - you tube](https://www.youtube.com/watch?v=REVHmBek3kA&list=PLF7ny2pVBcm29ri1Z50QXOo3gIiWbVs6u)\
 [Mohit kumar Toshniwal](https://www.youtube.com/channel/UCZwpQ59mtSdFzKYEnk3cbeA)\
 [Machine coding questions - github repo](https://github.com/YashLT224/Machine-coding-Questions)\
 [Machine coding questions- Github repo sanchit](https://github.com/sanchit0496/reactjs-machine-coding-challenges)
