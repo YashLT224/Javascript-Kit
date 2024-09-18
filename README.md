@@ -40,6 +40,11 @@ LeetCode \
 ## Best Youtube Channels
 
 
+
+## DS in Javascript
+[Vijay Bhati- You Tube](https://www.youtube.com/@Vijay_Bhati/videos)
+
+
 # Follow Me
 
 Stay connected and follow my updates on LinkedIn, Medium, and Dev.to! Click the logos below to visit my profiles.
