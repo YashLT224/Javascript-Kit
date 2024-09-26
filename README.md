@@ -27,7 +27,8 @@ LeetCode \
 [Machine coding questions - github repo](https://github.com/YashLT224/Machine-coding-Questions)\
 [Machine coding questions- Github repo sanchit](https://github.com/sanchit0496/reactjs-machine-coding-challenges) \
 [Aman - you tube](https://www.youtube.com/channel/UCsEDfU9rQMMBjlRz2mUQxCg)\
-[Piyush- Github](https://github.com/piyush-eon/frontend-interview-questions/blob/master/reactjs-interview-questions/progress-bar/src/components/ProgressBar.js)
+[Piyush- Github](https://github.com/piyush-eon/frontend-interview-questions/blob/master/reactjs-interview-questions/progress-bar/src/components/ProgressBar.js) \
+[Imran shaikh-Github](https://github.com/imran-mind/reactjs-frontendeval-challenges)
 
 
 
