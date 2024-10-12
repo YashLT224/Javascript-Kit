@@ -10,6 +10,18 @@ const asyncParallelExecuter = async function(promises) {
     // Await all promises to ensure all have been processed
     await Promise.all(executionPromises);
   }
+
+//way2
+ const asyncParallelExecuter = async function(promises) {
+    for (let promise of promises) {
+      try{
+        const result =  promise();
+        result.then((r)=>console.log(r));
+      }catch(e){
+        console.log(e);
+      }
+    }
+  }
   
   const asyncTask = function(i) {
     return new Promise((resolve, reject) => {
