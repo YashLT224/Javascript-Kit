@@ -40,7 +40,7 @@ LeetCode \
 [YouTube- devsage](https://www.youtube.com/watch?v=JKNjfDCNPa4) 
 
 ## Best Youtube Channels
-Redux  and Redux Tookit - [Anurag singh Proodrr](https://www.youtube.com/watch?v=ee22Ap1z9J4&list=PLfEr2kn3s-br2OoBNSR7S5eJ-kcEeUQcG&index=6)
+Redux  and Redux Tookit - [Anurag singh Proodrr](https://www.youtube.com/watch?v=ee22Ap1z9J4&list=PLfEr2kn3s-br2OoBNSR7S5eJ-kcEeUQcG&index=6) \
 RTK Query - [Anurag singh Proodrr](https://www.youtube.com/watch?v=ee22Ap1z9J4&list=PLfEr2kn3s-br2OoBNSR7S5eJ-kcEeUQcG&index=6)
 
 
