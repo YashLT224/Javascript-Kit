@@ -74,3 +74,23 @@ console.log(curriedSum(1)(2)(3)(4));     // Output: 10
 console.log(curriedSum(1, 2, 3)(4));     // Output: 10
 console.log(curriedSum(1, 2)(3)(4));     // Output: 10
 console.log(curriedSum(1)(2, 3, 4));     // Output: 10
+
+
+
+
+
+
+
+//way3
+
+function sum(val1) {
+  return function(val2) {
+    if (!val2) {
+      return val1;
+    }
+    return sum(val1 + val2);
+  }
+}
+
+
+console.log(sum(10)(20)(30)(40)());
