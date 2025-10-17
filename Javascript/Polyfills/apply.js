@@ -18,3 +18,16 @@ if (!Function.prototype.apply) {
     return result;
   };
 }
+
+
+
+
+
+Explanation of the Polyfill:
+
+this is the function that is being polyfilled.
+thisArg is the value of this that will be used in the function.
+argsArray is the array of arguments that will be passed to the function.
+A unique property (uniqueKey) is used to ensure that we don't override any existing properties on thisArg. This makes sure our polyfill doesn't interfere with existing methods on the target object.
+The function is called using thisArg[uniqueKey](...argsArray).
+After the call, we delete the temporary property to ensure no side effects.
