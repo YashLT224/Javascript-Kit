@@ -1,5 +1,8 @@
 if (!Function.prototype.apply) {
   Function.prototype.apply = function(thisArg, argsArray) {
+  // If context is null or undefined, set it to global object
+     thisArg = thisArg || globalThis;
+    
     // If no argsArray is provided, set it to an empty array
     if (argsArray === undefined) {
       argsArray = [];
