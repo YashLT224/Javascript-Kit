@@ -25,4 +25,11 @@ Student.prototype.definition=function(){
 
 let s1= new Student('guntua',20,'A1')
 s1.greet() //guntua - 20
-s1.definition(). //guntua-20-A1
+s1.definition() //guntua-20-A1
+
+
+//Prototype inheritance refers to the mechanism by which an object inherits properties and methods from another object, usually through the prototype of a constructor function or a class. It is a way to share properties and methods across multiple instances of an object.
+//When a constructor function or class is used to create an object, that object inherits properties and methods from the constructor function’s prototype.
+//Key Points:
+//Inheritance of properties and methods: When you define methods on a constructor's prototype, all instances created by that constructor can access those methods.
+//Common use: Prototype inheritance is often used to create methods that can be shared by all instances of a given type (constructor function or class).
