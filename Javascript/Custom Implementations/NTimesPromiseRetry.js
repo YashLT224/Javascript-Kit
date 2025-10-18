@@ -15,11 +15,11 @@
 
 //delay func
 const wait = ms => new Promise((resolve) => {
-    setTimeout(() => resolve(), ms);
-  });
-  const retryWithDelay = (
-    operation, retries = 3, 
-    delay = 50, finalErr = 'Retry failed') => new Promise((resolve, reject) => {
+  setTimeout(() => resolve(), ms);
+});
+const retryWithDelay = (
+  operation, retries = 3,
+  delay = 50, finalErr = 'Retry failed') => new Promise((resolve, reject) => {
     return operation()
       .then(resolve)
       .catch((reason) => {
@@ -32,13 +32,13 @@ const wait = ms => new Promise((resolve) => {
             .then(resolve)
             .catch(reject);
         }
-        
+
         // throw final error
         return reject(finalErr);
       });
   });
 
-  Input:
+Input:
 // Test function
 const getTestFunc = () => {
   let callCounter = 0;
@@ -76,29 +76,29 @@ Output:
 
 Using async…await.
 const retryWithDelay = async (
-    fn, retries = 3, interval = 50,
-    finalErr = 'Retry failed'
-  ) => {
-    try {
-      // try
-      await fn();
-    } catch (err) {
-      // if no retries left
-      // throw error
-      if (retries <= 0) {
-        return Promise.reject(finalErr);
-      }
-      
-      //delay the next call
-      await wait(interval);
-      
-      //recursively call the same func
-      return retryWithDelay(fn, (retries - 1), interval, finalErr);
+  fn, retries = 3, interval = 50,
+  finalErr = 'Retry failed'
+) => {
+  try {
+    // try
+    await fn();
+  } catch (err) {
+    // if no retries left
+    // throw error
+    if (retries <= 0) {
+      return Promise.reject(finalErr);
     }
+
+    //delay the next call
+    await wait(interval);
+
+    //recursively call the same func
+    return retryWithDelay(fn, (retries - 1), interval, finalErr);
   }
+}
 
 
-  Input:
+Input:
 // Test function
 const getTestFunc = () => {
   let callCounter = 0;
@@ -126,3 +126,55 @@ test().catch(console.error);
 Output:
 "success" // 1st test
 "Retry failed" //2nd test
+
+
+
+
+
+//way3
+
+function retryWithDelay(fn, retries = 3, delay = 1000) {
+  return new Promise((resolve, reject) => {
+    let attempt = 0;
+
+    // Helper function to attempt the task
+    const tryFn = () => {
+      attempt++;
+
+      // Call the function and check for success
+      fn()
+        .then(resolve)  // Resolve if the function succeeds
+        .catch((error) => {
+          if (attempt < retries) {
+            console.log(`Attempt ${attempt} failed, retrying in ${delay}ms...`);
+            setTimeout(tryFn, delay);  // Retry after delay
+          } else {
+            reject(`Failed after ${attempt} attempts: ${error}`);  // Reject after all attempts fail
+          }
+        });
+    };
+
+    tryFn(); // Start the first attempt
+  });
+}
+
+// Simulate a function that sometimes fails
+function unreliableTask() {
+  return new Promise((resolve, reject) => {
+    const success = Math.random() > 0.5;  // 50% chance of success
+    if (success) {
+      resolve("Task succeeded!");
+    } else {
+      reject("Task failed");
+    }
+  });
+}
+
+// Call the retryWithDelay function
+retryWithDelay(unreliableTask, 5, 2000)  // 5 retries, 2-second delay
+  .then((result) => {
+    console.log(result);  // Task succeeded!
+  })
+  .catch((error) => {
+    console.error(error);  // Failed after 5 attempts: Task failed
+  });
