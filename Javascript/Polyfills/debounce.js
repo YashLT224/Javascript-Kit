@@ -22,3 +22,18 @@ function debouncing(cb,delay){
 
   document.getElementById('searchBox').addEventListener('input', debouncedSearch);
 </script>
+
+
+
+
+
+
+function debounce(func,delay){
+  var timer=0;
+  return function (){
+    if(Date.now()-timer>delay){
+      func();
+    }
+    timer=Date.now();
+  }
+}
