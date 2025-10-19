@@ -1,56 +1,54 @@
 //way1
 
-function createConstPolyfill() {
-    const constantStore = new WeakMap();
+function createConstPolyfill(globalScope = typeof window !== 'undefined' ? window : globalThis) {
+  const constantStore = new WeakMap();
 
-    function deepFreeze(obj) {
-        Object.freeze(obj);
-        Object.keys(obj).forEach(key => {
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
-                deepFreeze(obj[key]);
-            }
-        });
-        return obj;
+  function deepFreeze(obj) {
+    Object.freeze(obj);
+    Object.keys(obj).forEach(key => {
+      if (typeof obj[key] === 'object' && obj[key] !== null && !Object.isFrozen(obj[key])) {
+        deepFreeze(obj[key]);
+      }
+    });
+    return obj;
+  }
+
+  return function defineConstant(name, value) {
+    let constants = constantStore.get(globalScope) || {};
+
+    if (constants[name]) {
+      throw new Error(`Cannot redeclare constant: ${name}`);
     }
 
-    return function defineConstant(name, value) {
-        if (constantStore.has(window) && constantStore.get(window)[name]) {
-            throw new Error(`Cannot redeclare constant: ${name}`);
-        }
+    // Mark this constant as defined
+    constants[name] = true;
+    constantStore.set(globalScope, constants);
 
-        const constants = constantStore.get(window) || {};
-        constants[name] = true;
-        constantStore.set(window, constants);
+    const finalValue = (typeof value === 'object' && value !== null)
+      ? deepFreeze(value)
+      : value;
 
-        const finalValue = typeof value === 'object' ? deepFreeze(value) : value;
-
-        Object.defineProperty(window, name, {
-            value: finalValue,
-            writable: false,
-            configurable: false,
-            enumerable: true
-        });
-    };
+    Object.defineProperty(globalScope, name, {
+      value: finalValue,
+      writable: false,
+      configurable: false,
+      enumerable: true
+    });
+  };
 }
 
+// ✅ Works in Node.js or Browser
 const defineConst = createConstPolyfill();
 
-// Usage examples:
 defineConst('CONFIG', { 
-    maxSize: 100,
-    settings: { theme: 'dark' }
+  maxSize: 100,
+  settings: { theme: 'dark' }
 });
 
-console.log(CONFIG.maxSize); // 100
-CONFIG.maxSize = 200; // Error
-CONFIG.settings.theme = 'light'; // Error
-defineConst('CONFIG', {}); // Error
-
-
-
-
-
-
+console.log(CONFIG.maxSize);        // 100 ✅
+CONFIG.maxSize = 200;               // ❌ No effect
+CONFIG.settings.theme = 'light';    // ❌ No effect
+// defineConst('CONFIG', {});       // ❌ Error: Cannot redeclare constant
 
 
 
