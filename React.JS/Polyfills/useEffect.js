@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 
-const useCustomEffect=(efect,deps)=>{
+const useCustomEffect=(effect,deps)=>{
     const isFirstRender=useRef(true);
     const prevDeps=useRef([]);
 

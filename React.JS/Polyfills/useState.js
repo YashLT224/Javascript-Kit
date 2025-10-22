@@ -1,4 +1,7 @@
-import { useReducer } from "react";
+ //https://freedium-mirror.cfd/
+ //https://blogs.starkdevelopers.in/implemented-my-own-custom-usestate-hook-in-react-7f38e7531458
+
+ import { useReducer } from "react";
 
 let hookIdTracker = 0;
 let states = [];
@@ -53,3 +56,114 @@ Without resetting hookIdTracker, subsequent renders would not start tracking fro
 
 
 */
+
+
+
+
+//way 2
+import { createRoot } from "react-dom/client";
+
+const states = [];
+let stateCounter = -1;
+
+const useMyState = (initialValue) => {
+  const stateIndex = ++stateCounter;
+
+  if (states[stateIndex]) {
+    return states[stateIndex];
+  }
+
+  // Check if the passed it value is a function then call it
+  // otherwise assign the value directly
+  let value;
+  if (typeof initialValue === "function") {
+    value = initialValue();
+  } else {
+    value = initialValue;
+  }
+
+  const setValue = (newValue) => {
+    const state = states[stateIndex];
+
+    // If callback is passed then call the function with the currentState value
+    // Otherwise assign the new value
+    const previousStateValue = state[0];
+    if (typeof newValue === "function") {
+      state[0] = newValue(previousStateValue);
+    } else {
+      state[0] = newValue;
+    }
+
+    // Check if new value is not the same as previous value
+    // If same, do not rerender the component
+    if (state[0] !== previousStateValue) {
+      renderApp();
+    }
+  };
+
+  const state = [value, setValue];
+
+  states.push(state);
+
+  return state;
+};
+
+export default function App() {
+  const [count, setCount] = useMyState(0);
+  const [name, setName] = useMyState("");
+  const [todos, setTodos] = useMyState([]);
+  const [todoItem, setTodoItem] = useMyState("");
+
+  const handleClick = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleTodoItemChange = (event) => {
+    setTodoItem(event.target.value);
+  };
+
+  const handleAddTodo = () => {
+    if (!todoItem) return;
+
+    setTodos((prevTodos) => [...prevTodos, todoItem]);
+    setTodoItem("");
+  };
+
+  return (
+    <div className="App">
+      <h3>Implementing my own useState</h3>
+      <div>Counter: {count}</div>
+      <br />
+      <button onClick={handleClick}>Click Me!</button>
+      <br />
+      <br />
+      <input value={name} onChange={handleChange} />
+      <br />
+      <br />
+      <h4>Todos</h4>
+      <input value={todoItem} onChange={handleTodoItemChange} />
+      <button onClick={handleAddTodo}>Add Todo</button>
+      <br />
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+const renderApp = () => {
+  stateCounter = -1;
+
+  root.render(<App />);
+};
+
+renderApp();
